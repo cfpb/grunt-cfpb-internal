@@ -1,36 +1,7 @@
-# {%= name %}{% if (travis) { %} [![Build Status]({%= travis %}.png?branch=master)]({%= travis %}){% } %}
-
-> {%= description %}
-
-{% if (in_development) { %}
-_Note that this is not an official Grunt plugin release! If you want to use this in a project, please be sure to follow the instructions for installing development versions, as outlined in the [Installing Grunt](http://gruntjs.com/installing-grunt) guide._
-{% } %}
-
-## Getting Started
-This plugin requires Grunt `{%= peerDependencies.grunt %}`
-
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
-
-```shell
-npm install {%= name %} --save-dev
-```
-
-Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
-
-```js
-grunt.loadNpmTasks('{%= name %}');
-```
-
-{%= docs.plugin.overview || '' %}
-
-{% _.each(docs.task, function(doc, name) { %}
-## {%= _.capitalize(name) %} task
-_Run this task with the `grunt {%= name %}` command._
-
-{%= doc.overview || '' %}
-{%= doc.options || '' %}
-{%= doc.examples || '' %}
+{% _.each(docs, function(doc, name) { %}
+{%= doc %}
 {% }); %}
+
 ## Release History
 {% if (changelog) {
   _.each(changelog, function(details, version) {
@@ -48,8 +19,10 @@ _Run this task with the `grunt {%= name %}` command._
 _(Nothing yet)_
 {% } %}
 
----
+## License
 
-Task submitted by [{%= authors[0].name %}]({%= authors[0].url %})
+{%= license || 'This project is a work of the public domain.' %}
+
+---
 
 *This file was generated on {%= grunt.template.today() %}.*

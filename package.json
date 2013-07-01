@@ -1,23 +1,24 @@
 {
-  "name": "grunt-contrib-internal",
-  "description": "Internal tasks for managing the grunt-contrib project.",
-  "version": "0.4.5",
-  "homepage": "https://github.com/gruntjs/grunt-contrib-internal",
+  "name": "grunt-cfpb-internal",
+  "description": "Internal tasks for managing CFPB projects.",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://cfpb.ghe.url/contolini/grunt-cfpb-internal",
   "author": {
-    "name": "Grunt Team",
-    "url": "http://gruntjs.com/"
+    "name": "Chris Contolini",
+    "url": "http://consumerfinance.gov"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/gruntjs/grunt-contrib-internal.git"
+    "url": "git://cfpb.ghe.url/contolini/grunt-cfpb-internal.git"
   },
   "bugs": {
-    "url": "https://github.com/gruntjs/grunt-contrib-internal/issues"
+    "url": "https://cfpb.ghe.url/contolini/grunt-cfpb-internal/issues"
   },
   "licenses": [
     {
-      "type": "MIT",
-      "url": "https://github.com/gruntjs/grunt-contrib-internal/blob/master/LICENSE-MIT"
+      "type": "PUBLIC DOMAIN",
+      "url": "https://cfpb.ghe.url/contolini/grunt-cfpb-internal/LICENSE"
     }
   ],
   "main": "Gruntfile.js",

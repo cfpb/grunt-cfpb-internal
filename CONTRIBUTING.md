@@ -1,1 +1,1 @@
-Please see the [Contributing to grunt](http://gruntjs.com/contributing) guide for information on contributing to this project.
+In lieu of a formal styleguide, take care to maintain the existing coding style.
