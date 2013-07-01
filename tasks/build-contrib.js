@@ -11,7 +11,7 @@
 module.exports = function(grunt) {
 
   // Add custom template delimiters.
-  grunt.template.addDelimiters('build-contrib', '{%', '%}');
+  grunt.template.addDelimiters('build-cfpb', '{%', '%}');
 
   grunt.registerTask('build-cfpb', 'Generate CFPB README', function() {
 
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 
     // Generate readme.
     var tmpl = grunt.file.read( asset('README.tmpl.md') ),
-        appendix = grunt.template.process( tmpl, {data: meta, delimiters: 'build-contrib'} ),
+        appendix = grunt.template.process( tmpl, {data: meta, delimiters: 'build-cfpb'} ),
         readme = grunt.file.exists('README.md') ? grunt.file.read('README.md') : '';
 
     grunt.file.write( 'README.md', readme + appendix );
