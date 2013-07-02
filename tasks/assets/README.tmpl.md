@@ -1,7 +1,7 @@
 {% if (docs) {
-{% _.each(docs, function(doc, name) { %}
+  _.each(docs, function(doc, name) { %}
 {%= doc %}
-{% }); %}
+  {% }); %}
 {% } %}
 
 ## Release History
