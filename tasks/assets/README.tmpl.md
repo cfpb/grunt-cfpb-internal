@@ -1,9 +1,3 @@
-{% if (docs) {
-  _.each(docs, function(doc, name) { %}
-{%= doc %}
-  {% }); %}
-{% } %}
-
 ## Release History
 {% if (changelog) {
   _.each(changelog, function(details, version) {
