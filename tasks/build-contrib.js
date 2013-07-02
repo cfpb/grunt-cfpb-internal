@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         asset = path.join.bind(null, __dirname, 'assets'),
         meta = grunt.file.readJSON('package.json');
 
-    meta.changelog = grunt.file.readYAML('CHANGELOG.md');
+    meta.changelog = grunt.file.readYAML('CHANGELOG');
     meta.license = grunt.file.read('LICENSE');
 
     grunt.file.expand('docs/*.md').forEach( function(filepath) {
