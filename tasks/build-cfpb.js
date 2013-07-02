@@ -1,7 +1,9 @@
 /*
- * grunt-contrib-internal
- * http://gruntjs.com/
+ * grunt-cfpb-internal
+ * http://consumerfinance.gov
  *
+ * Based on grunt-contrib-less
+ * http://gruntjs.com
  * Copyright (c) 2012 Tyler Kellen, contributors
  * Licensed under the MIT license.
  */
@@ -20,7 +22,22 @@ module.exports = function(grunt) {
         asset = path.join.bind(null, __dirname, 'assets'),
         meta = grunt.file.readJSON('package.json');
 
+    // Read changelog YAML
+    if ( !grunt.file.exists('CHANGELOG') ) {
+        grunt.file.copy( asset('CHANGELOG'), 'CHANGELOG' );
+    }
     meta.changelog = grunt.file.readYAML('CHANGELOG');
+
+    // Read contributing markdown file
+    if ( !grunt.file.exists('CONTRIBUTING.md') ) {
+        grunt.file.copy( asset('CONTRIBUTING.md'), 'CONTRIBUTING.md' );
+    }
+    meta.contributing = grunt.file.read('CONTRIBUTING.md');
+
+    // Read license file
+    if ( !grunt.file.exists('LICENSE') ) {
+        grunt.file.copy( asset('LICENSE'), 'LICENSE' );
+    }
     meta.license = grunt.file.read('LICENSE');
 
     // Generate readme.
@@ -28,10 +45,10 @@ module.exports = function(grunt) {
         appendix = grunt.template.process( tmpl, {data: meta, delimiters: 'build-cfpb'} ),
         readme = grunt.file.exists('README.md') ? grunt.file.read('README.md') : '';
 
-    // Remove release history and everything after from readme because we'll be re-adding it.
-    // ([\s\n\r]*) selects any whitespace before the release history title.
+    // Remove contributing section and everything after from readme because we'll be re-adding it.
+    // ([\s\n\r]*) selects any whitespace before the contributing title.
     // ([\s\S]*) selects everything after the release history title.
-    readme = readme.replace(/([\s\n\r]*)## Release History([\s\S]*)/ig, '');
+    readme = readme.replace(/([\s\n\r]*)## Contributing([\s\S]*)/ig, '');
 
     grunt.file.write( 'README.md', readme + appendix );
     grunt.log.ok('Created README.md');
