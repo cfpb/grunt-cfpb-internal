@@ -1,5 +1,9 @@
 
 
+## Contributing
+
+{%= contributing || 'In lieu of a formal styleguide, take care to maintain the existing coding style.' %}
+
 ## Release History
 {% if (changelog) {
   _.each(changelog, function(details, version) {
