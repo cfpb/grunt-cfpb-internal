@@ -30,7 +30,8 @@
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.1.1",
-    "grunt": "~0.4.0"
+    "grunt": "~0.4.0",
+    "grunt-cfpb-internal": "git://cfpb.ghe.url/contolini/grunt-cfpb-internal.git"
   },
   "peerDependencies": {
     "grunt": "~0.4.0"

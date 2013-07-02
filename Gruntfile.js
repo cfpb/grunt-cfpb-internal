@@ -28,8 +28,9 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-cfpb-internal');
 
-  // By default, lint task.
-  grunt.registerTask('default', ['jshint', 'build-contrib']);
+  grunt.registerTask('build', ['build-cfpb']);
+  grunt.registerTask('default', ['jshint', 'build-cfpb']);
 
 };
