@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 
     // Remove contributing section and everything after from readme because we'll be re-adding it.
     // ([\s\n\r]*) selects any whitespace before the contributing title.
-    // ([\s\S]*) selects everything after the release history title.
+    // ([\s\S]*) selects everything after the contributing title.
     readme = readme.replace(/([\s\n\r]*)## Contributing([\s\S]*)/ig, '');
 
     grunt.file.write( 'README.md', readme + appendix );
