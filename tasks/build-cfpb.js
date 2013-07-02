@@ -28,6 +28,11 @@ module.exports = function(grunt) {
         appendix = grunt.template.process( tmpl, {data: meta, delimiters: 'build-cfpb'} ),
         readme = grunt.file.exists('README.md') ? grunt.file.read('README.md') : '';
 
+    // Remove release history and everything after from readme because we'll be re-adding it.
+    // ([\s\n\r]*) selects any whitespace before the release history title.
+    // ([\s\S]*) selects everything after the release history title.
+    readme = readme.replace(/([\s\n\r]*)## Release History([\s\S]*)/ig, '');
+
     grunt.file.write( 'README.md', readme + appendix );
     grunt.log.ok('Created README.md');
 

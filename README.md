@@ -23,24 +23,6 @@ grunt.loadNpmTasks('grunt-contrib-internal');
 
 _This plugin is used internally by grunt-contrib plugins, and shouldn't be used externally._
 
-
-
-## Release History
-
- * 2013-04-28   v0.4.5   Get travis url from package.json
- * 2013-04-01   v0.4.4   Changelog date timezone is localized.
- * 2013-02-20   v0.4.3   Fix typo in readme template.
- * 2013-02-17   v0.4.2   Moving overview text to the correct file. Mentioned grunt.loadNpmTasks in readme.
- * 2013-02-17   v0.4.1   Adding support for npm peerDependencies.
- * 2012-10-03   v0.1.0   Work in progress, not yet officially released.
-
----
-
-Task submitted by ["Cowboy" Ben Alman](http://benalman.com/)
-
-*This file was generated on Sun Apr 28 2013 12:36:55.*
-
-
 ## Release History
 
  * 2013-04-28   v0.4.5   Get travis url from package.json
@@ -56,4 +38,4 @@ A work of the public domain. Software source code written entirely by CFPB staff
 
 ---
 
-*This file was generated on Mon Jul 01 2013 21:34:22.*
+*This file was generated on Mon Jul 01 2013 22:12:10.*
