@@ -23,11 +23,6 @@ module.exports = function(grunt) {
     meta.changelog = grunt.file.readYAML('CHANGELOG');
     meta.license = grunt.file.read('LICENSE');
 
-    grunt.file.expand('docs/*.md').forEach( function(filepath) {
-      var filename = path.basename( filepath, '.md' );
-      meta.docs[filename] = grunt.file.read( filepath );
-    });
-
     // Generate readme.
     var tmpl = grunt.file.read( asset('README.tmpl.md') ),
         appendix = grunt.template.process( tmpl, {data: meta, delimiters: 'build-cfpb'} ),
