@@ -6,7 +6,7 @@
 
 1. [Install Node and Grunt](https://cfpb.ghe.url/contolini/grunt-init-cfpb#prerequisites)
 1. `npm install git://cfpb.ghe.url/contolini/grunt-cfpb-internal.git --save-dev`
-1. Add `grunt.loadNpmTasks('grunt-contrib-internal');` to your project's `Gruntfile.js`.
+1. Add `grunt.loadNpmTasks('grunt-cfpb-internal');` to your project's `Gruntfile.js`.
 1. Run the task with `grunt build-cfpb`.
 
 ## Documentation
@@ -31,4 +31,4 @@ For further details, please see: http://www.consumerfinance.gov/developers/sourc
 
 ---
 
-*This file was generated on Mon Jul 01 2013 23:46:59.*
+*This file was generated on Tue Jul 02 2013 00:06:04.*
