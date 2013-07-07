@@ -18,25 +18,27 @@ module.exports = function(grunt) {
   grunt.registerTask('build-cfpb', 'Generate CFPB README', function() {
 
     var path = require('path'),
-        fs = require('fs'),
         asset = path.join.bind(null, __dirname, 'assets'),
         meta = grunt.file.readJSON('package.json');
 
     // Read changelog YAML
     if ( !grunt.file.exists('CHANGELOG') ) {
         grunt.file.copy( asset('CHANGELOG'), 'CHANGELOG' );
+        grunt.log.ok('Created CHANGELOG file');
     }
     meta.changelog = grunt.file.readYAML('CHANGELOG');
 
     // Read contributing markdown file
     if ( !grunt.file.exists('CONTRIBUTING.md') ) {
         grunt.file.copy( asset('CONTRIBUTING.md'), 'CONTRIBUTING.md' );
+        grunt.log.ok('Created CONTRIBUTING.md');
     }
     meta.contributing = grunt.file.read('CONTRIBUTING.md');
 
     // Read license file
     if ( !grunt.file.exists('LICENSE') ) {
         grunt.file.copy( asset('LICENSE'), 'LICENSE' );
+        grunt.log.ok('Created LICENSE file');
     }
     meta.license = grunt.file.read('LICENSE');
 
