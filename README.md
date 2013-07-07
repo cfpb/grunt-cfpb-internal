@@ -19,6 +19,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+ * 2013-07-06   v0.1.1   Make grunt task more verbose
  * 2013-07-01   v0.1.0   Initial commit
 
 ## License
@@ -31,4 +32,4 @@ For further details, please see: http://www.consumerfinance.gov/developers/sourc
 
 ---
 
-*This file was generated on Tue Jul 02 2013 00:06:04.*
+*This file was generated on Sat Jul 06 2013 20:14:37.*
