@@ -28,10 +28,12 @@
   "scripts": {
     "test": "grunt test"
   },
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "shelljs": "~0.1.2"
+  },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.1.1",
-    "grunt": "~0.4.1",
-    "shelljs": "~0.1.2",
     "grunt-cfpb-internal": "git://cfpb.ghe.url/contolini/grunt-cfpb-internal.git"
   },
   "peerDependencies": {
