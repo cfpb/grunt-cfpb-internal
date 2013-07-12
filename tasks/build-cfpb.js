@@ -10,6 +10,8 @@
 
 'use strict';
 
+var shell = require('shelljs');
+
 module.exports = function(grunt) {
 
   // Add custom template delimiters.
@@ -27,6 +29,7 @@ module.exports = function(grunt) {
         grunt.log.ok('Created CHANGELOG file');
     }
     meta.changelog = grunt.file.readYAML('CHANGELOG');
+    console.log(Object.keys(meta.changelog)[0]);
 
     // Read contributing markdown file
     if ( !grunt.file.exists('CONTRIBUTING.md') ) {
@@ -54,6 +57,17 @@ module.exports = function(grunt) {
 
     grunt.file.write( 'README.md', readme + appendix );
     grunt.log.ok('Created README.md');
+
+    // Get the most recent version from the changelog
+    var version = Object.keys( meta.changelog )[0];
+    // Check if the readme contains the most recent version (there's probably a better way to do this)
+    if ( readme.indexOf( version ) === -1 ) {
+        meta.version = version.replace( 'v', '' );
+        shell.exec( 'git tag ' + version + ' -m "Version '+ version +'"', {silent:true} );
+        shell.exec( 'git push --tags' );
+        grunt.file.write( 'package.json', JSON.stringify( meta, null, '  ' ) + '\n');
+        grunt.log.ok( 'Version bumped to ' + version );
+    }
 
     // Fail task if any errors were logged.
     if ( this.errorCount > 0 ) { return false; }
