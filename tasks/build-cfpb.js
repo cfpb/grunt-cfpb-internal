@@ -71,13 +71,16 @@ module.exports = function(grunt) {
         // Bump the version in package.json.
         pkg.version = version.replace( 'v', '' );
         grunt.file.write( 'package.json', JSON.stringify( pkg, null, '  ' ) + '\n');
+        grunt.log.ok( 'Version bumped to ' + version + ' in package.json.');
 
         // Commit the latest changes.
         shell.exec( 'git commit -am "' + msg + '"' );
+        grunt.log.ok( 'Changes have been committed.' );
 
         // Tag and push tags.
         shell.exec( 'git tag ' + version + ' -m "Version ' + version + '"', {silent:true} );
         shell.exec( 'git push --tags' );
+        grunt.log.ok( 'Git tag has been created and pushed.' );
 
         // Notify the user.
         grunt.log.ok( 'Version bumped to ' + version );
