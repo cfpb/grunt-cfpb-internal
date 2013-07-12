@@ -3,6 +3,7 @@ v0.2.2:
   changes:
     - Fix package.json write bug.
     - Commit before tagging.
+    - Improve verbosity.
 
 v0.2.1:
   date: 2013-07-11
@@ -18,9 +19,9 @@ v0.2.0:
 v0.1.1:
   date: 2013-07-06
   changes:
-    - Make grunt task more verbose
+    - Make grunt task more verbose.
 
 v0.1.0:
   date: 2013-07-01
   changes:
-    - Initial commit
+    - Initial commit.
