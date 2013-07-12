@@ -20,7 +20,22 @@ module.exports = function(grunt) {
       options: {
         jshintrc: '.jshintrc'
       }
+    },
+
+    /**
+     * Docco: https://github.com/DavidSouther/grunt-docco
+     * 
+     * Grunt Docco plugin.
+     */
+    docco: {
+      js: {
+        src: ['tasks/build-cfpb.js'],
+        options: {
+          output: 'docs/'
+        }
+      }
     }
+
   });
 
   // Actually load this plugin's task(s).
@@ -29,8 +44,9 @@ module.exports = function(grunt) {
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-cfpb-internal');
+  grunt.loadNpmTasks('grunt-docco');
 
   grunt.registerTask('build', ['build-cfpb']);
-  grunt.registerTask('default', ['jshint', 'build-cfpb']);
+  grunt.registerTask('default', ['jshint', 'build-cfpb', 'docco']);
 
 };
