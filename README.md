@@ -1,6 +1,6 @@
 # grunt-cfpb-internal
 
-Internal grunt task for automating front-end project documentation and version management. Inspired by [grunt-contrib-internal](https://github.com/gruntjs/grunt-contrib-internal).
+Internal grunt task for automating project documentation and semantic versioning. Inspired by [grunt-contrib-internal](https://github.com/gruntjs/grunt-contrib-internal).
 
 grunt-cfpb-internal does a few things:
 * Creates `CONTRIBUTING.md`, `CHANGELOG` and `LICENSE` files in your project's root if they don't already exist.
