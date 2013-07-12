@@ -1,3 +1,9 @@
+v0.2.0:
+  date: 2013-07-11
+  changes:
+    - Auto-commit and push git tags.
+    - Auto-update package.json version.
+
 v0.1.1:
   date: 2013-07-06
   changes:

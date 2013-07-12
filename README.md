@@ -19,6 +19,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+ * 2013-07-11   v0.2.0   Auto-commit and push git tags. Auto-update package.json version.
  * 2013-07-06   v0.1.1   Make grunt task more verbose
  * 2013-07-01   v0.1.0   Initial commit
 
@@ -32,4 +33,4 @@ For further details, please see: http://www.consumerfinance.gov/developers/sourc
 
 ---
 
-*This file was generated on Sat Jul 06 2013 20:14:37.*
+*This file was generated on Thu Jul 11 2013 22:43:36.*
