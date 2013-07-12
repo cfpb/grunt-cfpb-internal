@@ -23,7 +23,7 @@ module.exports = function(grunt) {
         asset = path.join.bind(null, __dirname, 'assets'),
         meta = grunt.file.readJSON('package.json');
 
-    // Read changelog YAML
+    // Read the changelog YAML file.
     if ( !grunt.file.exists('CHANGELOG') ) {
         grunt.file.copy( asset('CHANGELOG'), 'CHANGELOG' );
         grunt.log.ok('Created CHANGELOG file');
@@ -31,14 +31,14 @@ module.exports = function(grunt) {
     meta.changelog = grunt.file.readYAML('CHANGELOG');
     console.log(Object.keys(meta.changelog)[0]);
 
-    // Read contributing markdown file
+    // Read the contributing markdown file.
     if ( !grunt.file.exists('CONTRIBUTING.md') ) {
         grunt.file.copy( asset('CONTRIBUTING.md'), 'CONTRIBUTING.md' );
         grunt.log.ok('Created CONTRIBUTING.md');
     }
     meta.contributing = grunt.file.read('CONTRIBUTING.md');
 
-    // Read license file
+    // Read the license file.
     if ( !grunt.file.exists('LICENSE') ) {
         grunt.file.copy( asset('LICENSE'), 'LICENSE' );
         grunt.log.ok('Created LICENSE file');
@@ -58,16 +58,28 @@ module.exports = function(grunt) {
     grunt.file.write( 'README.md', readme + appendix );
     grunt.log.ok('Created README.md');
 
-    // Get the most recent version from the changelog
+    // Get the most recent version from the changelog.
     var version = Object.keys( meta.changelog )[0];
 
-    // Check if the readme contains the most recent version (there's probably a better way to do this)
-    if ( readme.indexOf( version ) === -1 ) {
-        var pkg = grunt.file.readJSON('package.json');
+    // Check if the readme contains the most recent version (there's probably a better way to do this).
+    if ( grunt.file.read('README.md').indexOf( version ) === -1 ) {
+
+        // Get a fresh copy of package json and stringify the latest CHANGELOG entry.
+        var pkg = grunt.file.readJSON('package.json'),
+            msg = meta.changelog[ version ].changes.join(' ');
+
+        // Bump the version in package.json.
         pkg.version = version.replace( 'v', '' );
         grunt.file.write( 'package.json', JSON.stringify( pkg, null, '  ' ) + '\n');
-        shell.exec( 'git tag ' + version + ' -m "Version '+ version +'"', {silent:true} );
+
+        // Commit the latest changes.
+        shell.exec( 'git commit -am "' + msg + '"' );
+
+        // Tag and push tags.
+        shell.exec( 'git tag ' + version + ' -m "Version ' + version + '"', {silent:true} );
         shell.exec( 'git push --tags' );
+
+        // Notify the user.
         grunt.log.ok( 'Version bumped to ' + version );
     }
 
