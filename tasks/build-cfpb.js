@@ -62,10 +62,11 @@ module.exports = function(grunt) {
     var version = Object.keys( meta.changelog )[0];
     // Check if the readme contains the most recent version (there's probably a better way to do this)
     if ( readme.indexOf( version ) === -1 ) {
-        meta.version = version.replace( 'v', '' );
+        var pkg = grunt.file.readJSON('package.json');
+        pkg.version = version.replace( 'v', '' );
         shell.exec( 'git tag ' + version + ' -m "Version '+ version +'"', {silent:true} );
         shell.exec( 'git push --tags' );
-        grunt.file.write( 'package.json', JSON.stringify( meta, null, '  ' ) + '\n');
+        grunt.file.write( 'package.json', JSON.stringify( pkg, null, '  ' ) + '\n');
         grunt.log.ok( 'Version bumped to ' + version );
     }
 

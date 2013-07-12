@@ -1,7 +1,7 @@
 {
   "name": "grunt-cfpb-internal",
   "description": "Internal tasks for managing CFPB projects.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "homepage": "https://cfpb.ghe.url/contolini/grunt-cfpb-internal",
   "author": {
@@ -32,13 +32,11 @@
     "grunt-contrib-jshint": "~0.1.1",
     "grunt": "~0.4.1",
     "shelljs": "~0.1.2",
-    "grunt-cfpb-internal": "git://cfpb.ghe.url/contolini/grunt-cfpb-internal.git"
+    "grunt-cfpb-internal": "git://cfpb.ghe.url/contolini/grunt-cfpb-internal.git",
+    "grunt": "~0.4.1"
   },
   "peerDependencies": {
     "grunt": "~0.4.0"
   },
-  "keywords": [],
-  "dependencies": {
-    "grunt": "~0.4.1"
-  }
+  "keywords": []
 }
