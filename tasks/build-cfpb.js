@@ -53,16 +53,16 @@ module.exports = function(grunt) {
     // Remove contributing section and everything after from readme because we'll be re-adding it.
     // ([\s\n\r]*) selects any whitespace before the contributing title.
     // ([\s\S]*) selects everything after the contributing title.
-    readme = readme.replace(/([\s\n\r]*)## Contributing([\s\S]*)/ig, '');
+    var newReadme = readme.replace(/([\s\n\r]*)## Contributing([\s\S]*)/ig, '');
 
-    grunt.file.write( 'README.md', readme + appendix );
+    grunt.file.write( 'README.md', newReadme + appendix );
     grunt.log.ok('Created README.md');
 
     // Get the most recent version from the changelog.
     var version = Object.keys( meta.changelog )[0];
 
     // Check if the readme contains the most recent version (there's probably a better way to do this).
-    if ( grunt.file.read('README.md').indexOf( version ) === -1 ) {
+    if ( readme.indexOf( version ) === -1 ) {
 
         // Get a fresh copy of package json and stringify the latest CHANGELOG entry.
         var pkg = grunt.file.readJSON('package.json'),

@@ -29,7 +29,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
- * 2013-07-12   v0.2.2   Fix package.json write bug.
+ * 2013-07-12   v0.2.2   Fix package.json write bug. Commit before tagging.
  * 2013-07-11   v0.2.1   Fix package.json pollution bug.
  * 2013-07-11   v0.2.0   Auto-commit and push git tags. Auto-update package.json version.
  * 2013-07-06   v0.1.1   Make grunt task more verbose
@@ -45,4 +45,4 @@ For further details, please see: http://www.consumerfinance.gov/developers/sourc
 
 ---
 
-*This file was generated on Thu Jul 11 2013 23:49:52.*
+*This file was generated on Fri Jul 12 2013 00:13:15.*
