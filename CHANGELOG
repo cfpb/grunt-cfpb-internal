@@ -1,3 +1,8 @@
+v0.2.1:
+  date: 2013-07-11
+  changes:
+    - Fix package.json pollution bug.
+
 v0.2.0:
   date: 2013-07-11
   changes:
