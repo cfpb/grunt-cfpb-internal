@@ -65,9 +65,9 @@ module.exports = function(grunt) {
     if ( readme.indexOf( version ) === -1 ) {
         var pkg = grunt.file.readJSON('package.json');
         pkg.version = version.replace( 'v', '' );
+        grunt.file.write( 'package.json', JSON.stringify( pkg, null, '  ' ) + '\n');
         shell.exec( 'git tag ' + version + ' -m "Version '+ version +'"', {silent:true} );
         shell.exec( 'git push --tags' );
-        grunt.file.write( 'package.json', JSON.stringify( pkg, null, '  ' ) + '\n');
         grunt.log.ok( 'Version bumped to ' + version );
     }
 
