@@ -1,17 +1,27 @@
 # grunt-cfpb-internal
 
-> Internal grunt tasks for managing project documentation. Based on [grunt-contrib-internal](https://github.com/gruntjs/grunt-contrib-internal).
+Internal grunt task for automating front-end project documentation and version management. Inspired by [grunt-contrib-internal](https://github.com/gruntjs/grunt-contrib-internal).
+
+grunt-cfpb-internal does a few things:
+* Creates `CONTRIBUTING.md`, `CHANGELOG` and `LICENSE` files in your project's root if they don't already exist.
+* Appends the aforementioned files to your `README.md` with a timestamp.
+* Creates and pushes an [annotated git tag](http://git-scm.com/book/en/Git-Basics-Tagging#Annotated-Tags) using the [semver](http://semver.org/) convention.
+* Bumps the version number in your package.json.
 
 ## Getting Started
 
 1. [Install Node and Grunt](https://cfpb.ghe.url/contolini/grunt-init-cfpb#prerequisites)
 1. `npm install git://cfpb.ghe.url/contolini/grunt-cfpb-internal.git --save-dev`
 1. Add `grunt.loadNpmTasks('grunt-cfpb-internal');` to your project's `Gruntfile.js`.
+
+## Usage
+
+1. Add a new entry in `CHANGELOG` whenever you fix bugs or add features. Adhere to the [semver](http://semver.org/) system.
 1. Run the task with `grunt build-cfpb`.
 
 ## Documentation
 
-grunt-cfpb-internal will append your CONTRIBUTING.md, CHANGELOG and LICENSE files to your README.md. If these files are not in your project's root directory, they will be generated. CHANGELOG should be in YAML format and will be parsed accordingly.
+View the [annotated source](https://cfpb.ghe.url/pages/contolini/grunt-cfpb-internal/docs/build-cfpb.html).
 
 ## Contributing
 
