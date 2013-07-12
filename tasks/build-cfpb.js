@@ -60,6 +60,7 @@ module.exports = function(grunt) {
 
     // Get the most recent version from the changelog
     var version = Object.keys( meta.changelog )[0];
+
     // Check if the readme contains the most recent version (there's probably a better way to do this)
     if ( readme.indexOf( version ) === -1 ) {
         var pkg = grunt.file.readJSON('package.json');
@@ -72,6 +73,7 @@ module.exports = function(grunt) {
 
     // Fail task if any errors were logged.
     if ( this.errorCount > 0 ) { return false; }
+
   });
 
 };
