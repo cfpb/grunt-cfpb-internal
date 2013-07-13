@@ -3,7 +3,7 @@
 Internal grunt task for automating project documentation and semantic versioning. Inspired by [grunt-contrib-internal](https://github.com/gruntjs/grunt-contrib-internal).
 
 grunt-cfpb-internal does a few things:
-* Creates `CONTRIBUTING.md`, `CHANGELOG` and `LICENSE` files in your project's root if they don't already exist.
+* Creates [`CONTRIBUTING.md`](https://github.com/blog/1184-contributing-guidelines), `CHANGELOG` and [`LICENSE`](http://www.oss-watch.ac.uk/resources/opensourceyourcode#applying-the-licence) files in your project's root if they don't already exist.
 * Appends the aforementioned files to your `README.md` with a timestamp.
 * Creates and pushes an [annotated git tag](http://git-scm.com/book/en/Git-Basics-Tagging#Annotated-Tags) using the [semver](http://semver.org/) convention.
 * Bumps the version number in your package.json.
