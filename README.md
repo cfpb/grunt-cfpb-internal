@@ -10,7 +10,7 @@ grunt-cfpb-internal does a few things:
 
 ## Getting Started
 
-1. [Install Node and Grunt](https://cfpb.ghe.url/contolini/grunt-init-cfpb#prerequisites)
+1. [Install Node and Grunt](https://cfpb.ghe.url/front/grunt-init-cfpb#prerequisites)
 1. `npm install git://cfpb.ghe.url/front/grunt-cfpb-internal.git --save-dev`
 1. Add `grunt.loadNpmTasks('grunt-cfpb-internal');` to your project's `Gruntfile.js`.
 
