@@ -80,6 +80,8 @@ module.exports = function(grunt) {
         // Tag and push tags.
         shell.exec( 'git tag ' + version + ' -m "Version ' + version + '"', {silent:true} );
         shell.exec( 'git push --tags' );
+        // Push to upstream as well, if there's no upstream remote this will fail silenty.
+        shell.exec( 'git push upstream --tags', {silent:true} );
         grunt.log.ok( 'Git tag has been created and pushed.' );
 
         // Notify the user.

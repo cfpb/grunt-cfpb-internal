@@ -29,6 +29,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+ * 2013-07-16   v0.3.0   Push tags to upstream as well as origin.
  * 2013-07-12   v0.2.2   Fix package.json write bug. Commit before tagging. Improve verbosity.
  * 2013-07-11   v0.2.1   Fix package.json pollution bug.
  * 2013-07-11   v0.2.0   Auto-commit and push git tags. Auto-update package.json version.
@@ -45,4 +46,4 @@ For further details, please see: http://www.consumerfinance.gov/developers/sourc
 
 ---
 
-*This file was generated on Mon Jul 15 2013 13:35:16.*
+*This file was generated on Tue Jul 16 2013 14:40:55.*
