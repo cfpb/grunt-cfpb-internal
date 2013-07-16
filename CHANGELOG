@@ -1,8 +1,3 @@
-v0.3.0:
-  date: 2013-07-16
-  changes:
-    - Push tags to upstream as well as origin.
-
 v0.2.2:
   date: 2013-07-12
   changes:
