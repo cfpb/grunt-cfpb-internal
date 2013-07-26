@@ -11,6 +11,7 @@
     if (date instanceof Date) {
       date = grunt.template.date(new Date(date.getTime() + date.getTimezoneOffset() * 60000), 'yyyy-mm-dd');
     }
+    version = '[' + version + ']' + '(../../tree/' + version + ')';
     print('\n * ' + [
       date,
       version,
