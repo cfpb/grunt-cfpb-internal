@@ -29,12 +29,12 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
- * 2013-07-16   v0.3.0   Push tags to upstream as well as origin.
- * 2013-07-12   v0.2.2   Fix package.json write bug. Commit before tagging. Improve verbosity.
- * 2013-07-11   v0.2.1   Fix package.json pollution bug.
- * 2013-07-11   v0.2.0   Auto-commit and push git tags. Auto-update package.json version.
- * 2013-07-06   v0.1.1   Make grunt task more verbose.
- * 2013-07-01   v0.1.0   Initial commit.
+ * 2013-07-26   [v0.2.3](../../tree/v0.2.3)   Link versions in README to GH tags.
+ * 2013-07-12   [v0.2.2](../../tree/v0.2.2)   Fix package.json write bug. Commit before tagging. Improve verbosity.
+ * 2013-07-11   [v0.2.1](../../tree/v0.2.1)   Fix package.json pollution bug.
+ * 2013-07-11   [v0.2.0](../../tree/v0.2.0)   Auto-commit and push git tags. Auto-update package.json version.
+ * 2013-07-06   [v0.1.1](../../tree/v0.1.1)   Make grunt task more verbose.
+ * 2013-07-01   [v0.1.0](../../tree/v0.1.0)   Initial commit.
 
 ## License
 
@@ -46,4 +46,4 @@ For further details, please see: http://www.consumerfinance.gov/developers/sourc
 
 ---
 
-*This file was generated on Tue Jul 16 2013 14:40:55.*
+*This file was generated on Fri Jul 26 2013 19:19:49.*

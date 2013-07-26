@@ -1,7 +1,7 @@
 {
   "name": "grunt-cfpb-internal",
   "description": "Internal tasks for managing CFPB projects.",
-  "version": "0.3.0",
+  "version": "0.2.3",
   "private": true,
   "homepage": "https://cfpb.ghe.url/contolini/grunt-cfpb-internal",
   "author": {

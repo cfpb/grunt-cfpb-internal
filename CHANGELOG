@@ -1,3 +1,8 @@
+v0.2.3:
+  date: 2013-07-26
+  changes:
+    - Link versions in README to GH tags.
+
 v0.2.2:
   date: 2013-07-12
   changes:
