@@ -1,0 +1,32 @@
+v0.2.3:
+  date: 2013-07-26
+  changes:
+    - Link versions in README to GH tags.
+
+v0.2.2:
+  date: 2013-07-12
+  changes:
+    - Fix package.json write bug.
+    - Commit before tagging.
+    - Improve verbosity.
+
+v0.2.1:
+  date: 2013-07-11
+  changes:
+    - Fix package.json pollution bug.
+
+v0.2.0:
+  date: 2013-07-11
+  changes:
+    - Auto-commit and push git tags.
+    - Auto-update package.json version.
+
+v0.1.1:
+  date: 2013-07-06
+  changes:
+    - Make grunt task more verbose.
+
+v0.1.0:
+  date: 2013-07-01
+  changes:
+    - Initial commit.
