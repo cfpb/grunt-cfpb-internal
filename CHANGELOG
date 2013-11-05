@@ -1,3 +1,8 @@
+v0.3.0:
+  date: 2013-11-05
+  changes:
+    - Tidy up docs and deps for public release.
+
 v0.2.3:
   date: 2013-07-26
   changes:

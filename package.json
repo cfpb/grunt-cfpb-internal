@@ -1,32 +1,28 @@
 {
   "name": "grunt-cfpb-internal",
   "description": "Internal tasks for managing CFPB projects.",
-  "version": "0.2.3",
-  "private": true,
-  "homepage": "https://cfpb.ghe.url/contolini/grunt-cfpb-internal",
+  "version": "0.3.0",
+  "homepage": "https://github.com/cfpb/grunt-cfpb-internal",
   "author": {
     "name": "Chris Contolini",
     "url": "http://consumerfinance.gov"
   },
   "repository": {
     "type": "git",
-    "url": "git://cfpb.ghe.url/contolini/grunt-cfpb-internal.git"
+    "url": "git://github.com/cfpb/grunt-cfpb-internal.git"
   },
   "bugs": {
-    "url": "https://cfpb.ghe.url/contolini/grunt-cfpb-internal/issues"
+    "url": "https://github.com/cfpb/grunt-cfpb-internal/issues"
   },
   "licenses": [
     {
       "type": "PUBLIC DOMAIN",
-      "url": "https://cfpb.ghe.url/contolini/grunt-cfpb-internal/LICENSE"
+      "url": "http://www.consumerfinance.gov/developers/sourcecodepolicy/"
     }
   ],
   "main": "Gruntfile.js",
   "engines": {
     "node": ">= 0.8.0"
-  },
-  "scripts": {
-    "test": "grunt test"
   },
   "dependencies": {
     "grunt": "~0.4.1",
@@ -34,7 +30,7 @@
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.1.1",
-    "grunt-cfpb-internal": "git://cfpb.ghe.url/front/grunt-cfpb-internal.git",
+    "grunt-cfpb-internal": "~0.3.0",
     "grunt-docco": "~0.2.0"
   },
   "peerDependencies": {

@@ -10,8 +10,8 @@ grunt-cfpb-internal does a few things:
 
 ## Getting Started
 
-1. [Install Node and Grunt](https://cfpb.ghe.url/front/grunt-init-cfpb#prerequisites)
-1. `npm install git://cfpb.ghe.url/front/grunt-cfpb-internal.git --save-dev`
+1. Install [Node](http://nodejs.org/) and [Grunt](http://gruntjs.com/getting-started)
+1. `npm install grunt-cfpb-internal --save-dev`
 1. Add `grunt.loadNpmTasks('grunt-cfpb-internal');` to your project's `Gruntfile.js`.
 
 ## Usage
@@ -21,7 +21,7 @@ grunt-cfpb-internal does a few things:
 
 ## Documentation
 
-View the [annotated source](https://cfpb.ghe.url/pages/front/grunt-cfpb-internal/docs/build-cfpb.html).
+View the [annotated source](https://cfpb.github.com/grunt-cfpb-internal/docs/build-cfpb.html).
 
 ## Contributing
 
@@ -29,6 +29,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+ * 2013-11-05   [v0.3.0](../../tree/v0.3.0)   Tidy up docs and deps for public release.
  * 2013-07-26   [v0.2.3](../../tree/v0.2.3)   Link versions in README to GH tags.
  * 2013-07-12   [v0.2.2](../../tree/v0.2.2)   Fix package.json write bug. Commit before tagging. Improve verbosity.
  * 2013-07-11   [v0.2.1](../../tree/v0.2.1)   Fix package.json pollution bug.
@@ -46,4 +47,4 @@ For further details, please see: http://www.consumerfinance.gov/developers/sourc
 
 ---
 
-*This file was generated on Fri Jul 26 2013 19:23:21.*
+*This file was generated on Tue Nov 05 2013 14:51:31.*

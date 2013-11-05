@@ -47,6 +47,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-docco');
 
   grunt.registerTask('build', ['build-cfpb', 'docco']);
-  grunt.registerTask('default', ['jshint', 'build-cfpb', 'docco']);
+  grunt.registerTask('default', ['jshint']);
 
 };
