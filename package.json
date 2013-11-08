@@ -5,6 +5,7 @@
   "homepage": "https://github.com/cfpb/grunt-cfpb-internal",
   "author": {
     "name": "Chris Contolini",
+    "email": "christopher.contolini@cfpb.gov",
     "url": "http://consumerfinance.gov"
   },
   "repository": {
@@ -27,17 +28,17 @@
   "scripts": {
     "test": "grunt test"
   },
-  "dependencies": {
-    "grunt": "~0.4.1"
-  },
   "devDependencies": {
+    "grunt": "~0.4.1",
     "grunt-contrib-jshint": "~0.1.1",
     "grunt-docco": "~0.2.0",
     "grunt-contrib-nodeunit": "~0.2.2",
     "shelljs": "~0.1.2"
   },
   "peerDependencies": {
-    "grunt": "~0.4.0"
+    "grunt": "~0.4.1"
   },
-  "keywords": []
+  "keywords": [
+    "grunt"
+  ]
 }
