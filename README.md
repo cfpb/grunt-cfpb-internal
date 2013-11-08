@@ -25,17 +25,13 @@ View the [annotated source](https://cfpb.github.com/grunt-cfpb-internal/docs/bui
 
 ## Contributing
 
-## Public domain
-
 The project is in the public domain within the United States, and
 copyright and related rights in the work worldwide are waived through
-the [CC0 1.0 Universal public domain dedication][CC0].
+the [CC0 1.0 Universal public domain dedication](http://creativecommons.org/publicdomain/zero/1.0/).
 
 All contributions to this project will be released under the CC0
 dedication. By submitting a pull request, you are agreeing to comply
 with this waiver of copyright interest.
-
-[CC0]: http://creativecommons.org/publicdomain/zero/1.0/
 
 ## Release History
 
@@ -74,4 +70,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---
 
-*This file was generated on Fri Nov 08 2013 13:57:02.*
+*This file was generated on Fri Nov 08 2013 14:08:31.*

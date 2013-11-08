@@ -51,7 +51,7 @@ module.exports = function( grunt ) {
     }
     meta.license = grunt.file.read( dir + 'TERMS.md' );
 
-    // Read the license file.
+    // Read the copying file.
     if ( !grunt.file.exists( dir + 'COPYING.txt' ) ) {
         grunt.file.copy( asset('COPYING.txt'), dir + 'COPYING.txt' );
         grunt.log.ok('Created COPYING.txt file');
