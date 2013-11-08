@@ -1,3 +1,8 @@
+v0.5.1:
+  date: 2013-11-08
+  changes:
+    - Separate tag and push tasks.
+
 v0.5.0:
   date: 2013-11-08
   changes:

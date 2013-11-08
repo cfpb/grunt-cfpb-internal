@@ -24,7 +24,8 @@ module.exports = function( grunt ) {
         options = this.options({
           dir: './',
           commit: true,
-          tag: false
+          tag: true,
+          push: false
         }),
         dir = options.dir,
         meta = grunt.file.readJSON( dir + 'package.json' );
@@ -101,10 +102,15 @@ module.exports = function( grunt ) {
         }
 
         if ( options.tag ) {
-          // Tag and push tags.
+          // Create tag.
           shell.exec( 'git tag ' + version + ' -m "Version ' + version + '"', {silent:true} );
+          grunt.log.ok( 'Git tag has been created.' );
+        }
+
+        if ( options.push ) {
+          // Push tags.
           shell.exec( 'git push --tags' );
-          grunt.log.ok( 'Git tag has been created and pushed.' );
+          grunt.log.ok( 'Git tag has been pushed.' );
         }
 
     }

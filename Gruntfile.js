@@ -62,7 +62,8 @@ module.exports = function(grunt) {
       prod: {
         options: {
           commit: true,
-          tag: true
+          tag: true,
+          push: false
         }
       },
       test: {
