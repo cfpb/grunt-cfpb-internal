@@ -24,7 +24,7 @@ module.exports = function( grunt ) {
         options = this.options({
           dir: './',
           commit: true,
-          tag: true
+          tag: false
         }),
         dir = options.dir,
         meta = grunt.file.readJSON( dir + 'package.json' );
@@ -45,11 +45,17 @@ module.exports = function( grunt ) {
     meta.contributing = grunt.file.read( dir + 'CONTRIBUTING.md' );
 
     // Read the license file.
-    if ( !grunt.file.exists( dir + 'LICENSE' ) ) {
-        grunt.file.copy( asset('LICENSE'), dir + 'LICENSE' );
-        grunt.log.ok('Created LICENSE file');
+    if ( !grunt.file.exists( dir + 'TERMS.md' ) ) {
+        grunt.file.copy( asset('TERMS.md'), dir + 'TERMS.md' );
+        grunt.log.ok('Created TERMS.md file');
     }
-    meta.license = grunt.file.read( dir + 'LICENSE' );
+    meta.license = grunt.file.read( dir + 'TERMS.md' );
+
+    // Read the license file.
+    if ( !grunt.file.exists( dir + 'COPYING.txt' ) ) {
+        grunt.file.copy( asset('COPYING.txt'), dir + 'COPYING.txt' );
+        grunt.log.ok('Created COPYING.txt file');
+    }
 
     // Generate readme.
     var tmpl = grunt.file.read( asset('README.tmpl.md') ),

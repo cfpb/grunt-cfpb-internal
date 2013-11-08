@@ -29,11 +29,13 @@ exports.cfpb = {
     done();
   },
   create: function( test ) {
-    test.expect( 3 );
+    test.expect( 5 );
     testInternal( 'build-cfpb:test', function( results ){
       test.ok( grunt.file.exists( tmp + '/README.md' ), 'README was created.' );
       test.ok( grunt.file.exists( tmp + '/CHANGELOG' ), 'CHANGELOG was created.' );
-      test.ok( grunt.file.exists( tmp + '/CONTRIBUTING.md' ), 'CONTRIBUTING was created.' );
+      test.ok( grunt.file.exists( tmp + '/CONTRIBUTING.md' ), 'CONTRIBUTING.md was created.' );
+      test.ok( grunt.file.exists( tmp + '/TERMS.md' ), 'TERMS.md was created.' );
+      test.ok( grunt.file.exists( tmp + '/COPYING.txt' ), 'COPYING.txt was created.' );
       test.done();
     });
   },
