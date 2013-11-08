@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.1.1",
-    "grunt-cfpb-internal": "~0.3.0",
-    "grunt-docco": "~0.2.0"
+    "grunt-docco": "~0.2.0",
+    "grunt-contrib-nodeunit": "~0.2.2"
   },
   "peerDependencies": {
     "grunt": "~0.4.0"

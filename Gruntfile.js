@@ -12,6 +12,12 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+
+    /**
+     * JSHint: https://github.com/gruntjs/grunt-contrib-jshint
+     * 
+     * Validate files with JSHint.
+     */
     jshint: {
       all: [
         'Gruntfile.js',
@@ -34,6 +40,31 @@ module.exports = function(grunt) {
           output: 'docs/'
         }
       }
+    },
+
+    /**
+     * Nodeunit: https://github.com/gruntjs/grunt-contrib-nodeunit
+     * 
+     * Run Nodeunit unit tests.
+     */
+    nodeunit: {
+      all: ['test/**/*_test.js']
+    },
+
+    'build-cfpb': {
+      prod: {
+        options: {
+          commit: true,
+          tag: true
+        }
+      },
+      test: {
+        options: {
+          dir: 'test/tmp/',
+          commit: false,
+          tag: false
+        }
+      }
     }
 
   });
@@ -43,10 +74,11 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-cfpb-internal');
+  grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-docco');
 
-  grunt.registerTask('build', ['build-cfpb', 'docco']);
+  grunt.registerTask('test', ['nodeunit']);
+  grunt.registerTask('build', ['build-cfpb:prod', 'docco']);
   grunt.registerTask('default', ['jshint']);
 
 };
