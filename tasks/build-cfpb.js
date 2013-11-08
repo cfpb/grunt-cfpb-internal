@@ -96,6 +96,8 @@ module.exports = function( grunt ) {
         }
 
         if ( options.commit ) {
+          // Ensure that meta files get tracked if they were just created.
+          shell.exec( 'git add README.md CHANGELOG CONTRIBUTING.md COPYING.txt TERMS.md' );
           // Commit the latest changes.
           shell.exec( 'git commit -am "' + msg + '"' );
           grunt.log.ok( 'Changes have been committed.' );

@@ -35,6 +35,7 @@ with this waiver of copyright interest.
 
 ## Release History
 
+ * 2013-11-08   [v0.5.2](../../tree/v0.5.2)   Add shell.exec to make sure newly-created meta files get tracked/added.
  * 2013-11-08   [v0.5.1](../../tree/v0.5.1)   Separate tag and push tasks.
  * 2013-11-08   [v0.5.0](../../tree/v0.5.0)   Add CC0 licensing. Rename LICENSE to TERMS.
  * 2013-11-08   [v0.4.0](../../tree/v0.4.0)   Add Bower support.
@@ -71,4 +72,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---
 
-*This file was generated on Fri Nov 08 2013 14:53:55.*
+*This file was generated on Fri Nov 08 2013 15:18:47.*

@@ -1,3 +1,8 @@
+v0.5.2:
+  date: 2013-11-08
+  changes:
+    - Add shell.exec to make sure newly-created meta files get tracked/added.
+
 v0.5.1:
   date: 2013-11-08
   changes:
