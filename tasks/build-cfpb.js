@@ -1,10 +1,10 @@
 /*
  * grunt-cfpb-internal
- * http://consumerfinance.gov
+ * https://github.com/cfpb/grunt-cfpb-internal
  *
- * Based on grunt-contrib-less
- * http://gruntjs.com
- * Copyright (c) 2012 Tyler Kellen, contributors
+ * A public domain work of the Consumer Financial Protection Bureau.
+ *
+ * Parts (c) 2012 Tyler Kellen, contributors
  * Licensed under the MIT license.
  */
 
@@ -92,8 +92,6 @@ module.exports = function( grunt ) {
           grunt.log.ok( 'Git tag has been created and pushed.' );
         }
 
-        // Notify the user.
-        grunt.log.ok( 'Version bumped to ' + version );
     }
 
     // Fail task if any errors were logged.

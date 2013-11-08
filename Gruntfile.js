@@ -1,8 +1,10 @@
 /*
- * grunt-contrib-internal
- * http://gruntjs.com/
+ * grunt-cfpb-internal
+ * https://github.com/cfpb/grunt-cfpb-internal
  *
- * Copyright (c) 2012 Tyler Kellen, contributors
+ * A public domain work of the Consumer Financial Protection Bureau.
+ *
+ * Parts (c) 2012 Tyler Kellen, contributors
  * Licensed under the MIT license.
  */
 
@@ -51,6 +53,11 @@ module.exports = function(grunt) {
       all: ['test/**/*_test.js']
     },
 
+    /**
+     * grunt-cfpb-internal: https://github.com/cfpb/grunt-cfpb-internal
+     * 
+     * Some internal CFPB tasks.
+     */
     'build-cfpb': {
       prod: {
         options: {
@@ -77,8 +84,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-docco');
 
-  grunt.registerTask('test', ['nodeunit']);
+  grunt.registerTask('test', ['jshint', 'nodeunit']);
   grunt.registerTask('build', ['build-cfpb:prod', 'docco']);
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['test']);
 
 };

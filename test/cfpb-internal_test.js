@@ -2,7 +2,7 @@
 
 var grunt = require('grunt'),
     path = require('path'),
-    fixture = path.resolve( __dirname, 'fixtures', 'package.json' ),
+    fixture = path.resolve( __dirname, 'fixtures' ),
     tmp = path.resolve( __dirname, 'tmp' );
 
 function testInternal(cmd, cb) {
@@ -21,28 +21,42 @@ function testInternal(cmd, cb) {
 
 exports.cfpb = {
   setUp: function(done) {
-    grunt.file.copy( fixture, tmp + '/package.json' );
+    grunt.file.copy( fixture + '/package.json', tmp + '/package.json' );
     done();
   },
   tearDown: function(done) {
     grunt.file.delete( tmp );
     done();
   },
-  build: function( test ) {
+  create: function( test ) {
+    test.expect( 3 );
+    testInternal( 'build-cfpb:test', function( results ){
+      test.ok( grunt.file.exists( tmp + '/README.md' ), 'README was created.' );
+      test.ok( grunt.file.exists( tmp + '/CHANGELOG' ), 'CHANGELOG was created.' );
+      test.ok( grunt.file.exists( tmp + '/CONTRIBUTING.md' ), 'CONTRIBUTING was created.' );
+      test.done();
+    });
+  },
+  readme: function( test ) {
     test.expect( 1 );
-    testInternal( 'build-cfpb', function( results ){
-      test.ok( true, 'Should be true.' );
+    grunt.file.copy( fixture + '/README.md', tmp + '/README.md' );
+    testInternal( 'build-cfpb:test', function( results ){
+      var readme = grunt.file.read( tmp + '/README.md' );
+      test.ok( readme.indexOf( 'v0.3.0' ) === -1, 'Not overwrite readme.' );
+      test.done();
+    });
+  },
+  changelog: function( test ) {
+    test.expect( 2 );
+    grunt.file.copy( fixture + '/CHANGELOG', tmp + '/CHANGELOG' );
+    grunt.file.copy( fixture + '/README.md', tmp + '/README.md' );
+    testInternal( 'build-cfpb:test', function( results ){
+      var changelog = grunt.file.readYAML( tmp + '/CHANGELOG' ),
+          version = Object.keys( changelog )[0],
+          readme = grunt.file.read( tmp + '/README.md' );
+      test.equal( version, 'v0.4.0', 'Not overwrite changelog.' );
+      test.ok( readme.match( 'v0.4.0' ), 'Readme should be bumped' );
       test.done();
     });
   }
 };
-
-
-// major: function(test) {
-//     test.expect(2);
-//     testbump('bump:major', function(result) {
-//       test.ok(result.indexOf('from 0.1.0 to 1.0.0') !== -1, 'Should have bumped major version.');
-//       test.equal(grunt.file.readJSON(tmp).version, '1.0.0', 'Should have written the version to the file.');
-//       test.done();
-//     });
-//   },

@@ -29,7 +29,6 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
- * 2013-11-07   [v0.3.1](../../tree/v0.3.1)   Improve unit testing.
  * 2013-11-05   [v0.3.0](../../tree/v0.3.0)   Tidy up docs and deps for public release.
  * 2013-07-26   [v0.2.3](../../tree/v0.2.3)   Link versions in README to GH tags.
  * 2013-07-12   [v0.2.2](../../tree/v0.2.2)   Fix package.json write bug. Commit before tagging. Improve verbosity.
@@ -48,4 +47,4 @@ For further details, please see: http://www.consumerfinance.gov/developers/sourc
 
 ---
 
-*This file was generated on Thu Nov 07 2013 22:08:22.*
+*This file was generated on Thu Nov 07 2013 21:20:53.*
