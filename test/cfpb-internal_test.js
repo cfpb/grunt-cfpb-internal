@@ -37,12 +37,31 @@ exports.cfpb = {
       test.done();
     });
   },
+  package: function( test ) {
+    test.expect( 1 );
+    grunt.file.copy( fixture + '/CHANGELOG', tmp + '/CHANGELOG' );
+    testInternal( 'build-cfpb:test', function( results ){
+      var pkg = grunt.file.read( tmp + '/package.json' );
+      test.ok( pkg.indexOf( '0.4.0' ) !== -1, 'Bump package.json.' );
+      test.done();
+    });
+  },
+  bower: function( test ) {
+    test.expect( 1 );
+    grunt.file.copy( fixture + '/CHANGELOG', tmp + '/CHANGELOG' );
+    grunt.file.copy( fixture + '/bower.json', tmp + '/bower.json' );
+    testInternal( 'build-cfpb:test', function( results ){
+      var bower = grunt.file.read( tmp + '/bower.json' );
+      test.ok( bower.indexOf( '0.4.0' ) !== -1, 'Bump bower.json.' );
+      test.done();
+    });
+  },
   readme: function( test ) {
     test.expect( 1 );
     grunt.file.copy( fixture + '/README.md', tmp + '/README.md' );
     testInternal( 'build-cfpb:test', function( results ){
       var readme = grunt.file.read( tmp + '/README.md' );
-      test.ok( readme.indexOf( 'v0.3.0' ) === -1, 'Not overwrite readme.' );
+      test.ok( readme.indexOf( 'v0.3.0' ) === -1, 'Don\'t overwrite readme.' );
       test.done();
     });
   },
@@ -54,8 +73,8 @@ exports.cfpb = {
       var changelog = grunt.file.readYAML( tmp + '/CHANGELOG' ),
           version = Object.keys( changelog )[0],
           readme = grunt.file.read( tmp + '/README.md' );
-      test.equal( version, 'v0.4.0', 'Not overwrite changelog.' );
-      test.ok( readme.match( 'v0.4.0' ), 'Readme should be bumped' );
+      test.equal( version, 'v0.4.0', 'Don\'t overwrite changelog.' );
+      test.ok( readme.indexOf( 'v0.4.0' ) !== -1, 'Readme should be bumped' );
       test.done();
     });
   }

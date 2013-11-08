@@ -72,12 +72,21 @@ module.exports = function( grunt ) {
 
         // Get a fresh copy of package json and stringify the latest CHANGELOG entry.
         var pkg = grunt.file.readJSON( dir + 'package.json' ),
-            msg = meta.changelog[ version ].changes.join(' ');
+            msg = meta.changelog[ version ].changes.join(' '),
+            bower;
 
         // Bump the version in package.json.
         pkg.version = version.replace( 'v', '' );
-        grunt.file.write( dir + 'package.json', JSON.stringify( pkg, null, '  ' ) + '\n');
+        grunt.file.write( dir + 'package.json', JSON.stringify( pkg, null, '  ' ) + '\n' );
         grunt.log.ok( 'Version bumped to ' + version + ' in package.json.');
+
+        // Bump the version in bower.json.
+        if ( grunt.file.exists( dir + 'bower.json' ) ) {
+          bower = grunt.file.readJSON( dir + 'bower.json' );
+          bower.version = version.replace( 'v', '' );
+          grunt.file.write( dir + 'bower.json', JSON.stringify( bower, null, '  ' ) + '\n' );
+          grunt.log.ok( 'Version bumped to ' + version + ' in bower.json.');
+        }
 
         if ( options.commit ) {
           // Commit the latest changes.
