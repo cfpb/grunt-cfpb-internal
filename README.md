@@ -10,14 +10,63 @@ This task does a few things:
 
 ## Getting Started
 
-1. Install [Node](http://nodejs.org/) and [Grunt](http://gruntjs.com/getting-started)
-1. `npm install grunt-cfpb-internal --save-dev`
-1. Add `grunt.loadNpmTasks('grunt-cfpb-internal');` to your project's `Gruntfile.js`.
+This plugin requires Grunt `~0.4.0`
+
+If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
+
+```shell
+npm install grunt-cfpb-internal --save-dev
+```
+
+Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
+
+```js
+grunt.loadNpmTasks('grunt-cfpb-internal');
+```
 
 ## Usage
 
 1. Add a new entry in `CHANGELOG` whenever you fix bugs or add features. Adhere to the [semver](http://semver.org/) system.
 1. Run the task with `grunt build-cfpb`.
+
+### Options
+
+#### dir
+Type: `String`  
+Default: `./`
+
+Specifies directory to be processed (your project's root).
+
+#### commit
+Type: `Boolean`  
+Default: `true`
+
+Commit all changes using git.
+
+#### tag
+Type: `Boolean`  
+Default: `true`
+
+Create an annotated git tag using the most recent version number in `CHANGELOG`.
+
+#### push
+Type: `Boolean`  
+Default: `false`
+
+Push git tags to remote repos.
+
+## Usage Examples
+
+```js
+'build-cfpb': {
+  main: {
+    options: {
+      commit: true,
+      tag: false
+    }
+  }
+}
+```
 
 ## Documentation
 
