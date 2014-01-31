@@ -1,4 +1,4 @@
-## MIT/Public domain Join Work
+## MIT/Public Domain Joint Work
 
 The project is a "joint work" (see 17 USC § 101) of the United States and
 its original authors. It is partially copyrighted, partially public domain,
