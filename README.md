@@ -1,5 +1,7 @@
 # grunt-cfpb-internal
 
+[![Build Status](https://travis-ci.org/cfpb/grunt-cfpb-internal.svg)](https://travis-ci.org/cfpb/grunt-cfpb-internal)
+
 Internal grunt task for automating project documentation and semantic versioning. Inspired by [grunt-contrib-internal](https://github.com/gruntjs/grunt-contrib-internal).
 
 This task does a few things:
